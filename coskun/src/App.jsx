@@ -812,7 +812,11 @@ function App() {
       <div className="warning-screen">
         <div className="warning-bg" />
         <div className="warning-content">
-          <h1 className="warning-title">COSKUN</h1>
+          <h1 className="warning-title">
+            {'COSKUN'.split('').map((char, i) => (
+              <span key={i} className="wletter">{char}</span>
+            ))}
+          </h1>
           <div className="warning-divider" />
           <p className="warning-text">PHOTOSENSITIVITY WARNING</p>
           <p className="warning-subtext">
@@ -849,12 +853,6 @@ function App() {
       </Canvas>
 
       <div className="overlay">
-        <nav className="nav">
-          <a href="#" className="nav-link">ABOUT</a>
-          <a href="#" className="nav-link">WORK</a>
-          <a href="#" className="nav-link">CONTACT</a>
-        </nav>
-
         <div className="center-content">
           <h1 className="title">
             {titleText.split('').map((char, i) => (
